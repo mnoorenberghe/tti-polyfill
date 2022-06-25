@@ -59,7 +59,7 @@ export function patchFetch(beforeRequestCb, afterRequestCb) {
             resolve(value);
           },
           (err) => {
-            afterRequestCb(err);
+            afterRequestCb(requestId);
             reject(err);
           });
     });
